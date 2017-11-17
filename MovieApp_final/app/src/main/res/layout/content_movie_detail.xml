@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/black"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="tugce.movieapp.moviedetail.MovieDetailActivity"
     tools:showIn="@layout/activity_movie_detail">
@@ -20,6 +21,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorMovieItemBackground"
                 android:padding="16dp">
 
                 <ImageView
@@ -39,7 +41,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_toRightOf="@+id/ivMoviePoster"
                     android:text="Maleficent"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@android:color/white"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
@@ -49,7 +51,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvMovieTitle"
                     android:layout_toRightOf="@+id/ivMoviePoster"
-                    android:text="Score: 5/10" />
+                    android:text="Score: 5/10"
+                    android:textColor="@color/colorMoveItemSubtext" />
 
                 <RatingBar
                     android:id="@+id/rbPopularity"
@@ -68,27 +71,25 @@
                     android:layout_alignEnd="@+id/rbPopularity"
                     android:layout_below="@+id/rbPopularity"
                     android:text="221892"
+                    android:textColor="@color/colorMoveItemSubtext"
                     android:textStyle="italic" />
 
             </RelativeLayout>
 
         </android.support.v7.widget.CardView>
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_below="@+id/card_view" />
 
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:id="@+id/card_view2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/view">
+            android:layout_below="@+id/card_view"
+            android:layout_marginTop="30dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/colorMovieItemBackground"
                 android:padding="16dp">
 
                 <TextView
@@ -100,7 +101,7 @@
                     android:layout_marginTop="15dp"
                     android:text="Movie Details:"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@android:color/white"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -109,7 +110,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvTitleOverview"
-                    android:text="A big screen remake of John Sturges' classic western The Magnificent Seven, itself a remake of Akira Kurosawa's Seven Samurai. Seven gun men in the old west gradually come together to help a poor village against savage thieves." />
+                    android:text="A big screen remake of John Sturges' classic western The Magnificent Seven, itself a remake of Akira Kurosawa's Seven Samurai. Seven gun men in the old west gradually come together to help a poor village against savage thieves."
+                    android:textColor="@color/colorMoveItemSubtext" />
 
                 <TextView
                     android:id="@+id/tvTitleReleaseDate"
@@ -118,6 +120,7 @@
                     android:layout_below="@+id/tvOverview"
                     android:layout_marginTop="15dp"
                     android:text="Release Date:"
+                    android:textColor="@color/colorMoveItemSubtext"
                     android:textStyle="bold" />
 
                 <TextView
@@ -127,7 +130,8 @@
                     android:layout_below="@+id/tvOverview"
                     android:layout_marginTop="15dp"
                     android:layout_toRightOf="@+id/tvTitleReleaseDate"
-                    android:text=" 09/14/2016" />
+                    android:text=" 09/14/2016"
+                    android:textColor="@color/colorMoveItemSubtext" />
 
                 <TextView
                     android:id="@+id/tvTitleLanguage"
@@ -135,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvTitleReleaseDate"
                     android:text="Language:"
+                    android:textColor="@color/colorMoveItemSubtext"
                     android:textStyle="bold" />
 
                 <TextView
@@ -143,7 +148,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tvTitleReleaseDate"
                     android:layout_toRightOf="@+id/tvTitleLanguage"
-                    android:text=" Fantastic" />
+                    android:text=" Fantastic"
+                    android:textColor="@color/colorMoveItemSubtext" />
 
             </RelativeLayout>
         </android.support.v7.widget.CardView>
