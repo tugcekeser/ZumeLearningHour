@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 import tugce.movieapp.R;
+import tugce.movieapp.constants.MovieAppConstants;
 import tugce.movieapp.helpers.MovieHelpers;
 import tugce.movieapp.models.Movie;
 
@@ -39,7 +40,7 @@ public class MovieDetailActivity extends AppCompatActivity {
         initViews();
 
         Intent intent = getIntent();
-        movie = (Movie) intent.getSerializableExtra("Movie");
+        movie = (Movie) intent.getSerializableExtra(MovieAppConstants.MOVIE);
 
         setValues();
     }

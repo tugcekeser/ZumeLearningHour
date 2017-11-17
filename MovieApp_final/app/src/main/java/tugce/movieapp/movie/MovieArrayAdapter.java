@@ -15,6 +15,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
+import tugce.movieapp.constants.MovieAppConstants;
 import tugce.movieapp.moviedetail.MovieDetailActivity;
 import tugce.movieapp.R;
 import tugce.movieapp.models.Movie;
@@ -42,10 +43,18 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final Movie movie = getItem(position);
+        ViewHolderMovie holder;
 
-        LayoutInflater inflater = LayoutInflater.from(getContext());
-        convertView = inflater.inflate(R.layout.item_movie, parent, false);
-        ViewHolderMovie holder = new ViewHolderMovie();
+        if (convertView == null) {
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            convertView = inflater.inflate(R.layout.item_movie, parent, false);
+            holder = new ViewHolderMovie();
+            convertView.setTag(holder);
+
+        } else {
+            holder = (ViewHolderMovie) convertView.getTag();
+        }
+
         holder.ivImage = (ImageView) convertView.findViewById(R.id.ivMovieImage);
         holder.ivImage.setImageResource(0);
 
@@ -70,7 +79,7 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getContext(), MovieDetailActivity.class).putExtra("Movie", movie);
+                Intent intent = new Intent(getContext(), MovieDetailActivity.class).putExtra(MovieAppConstants.MOVIE, movie);
                 getContext().startActivity(intent);
             }
         });

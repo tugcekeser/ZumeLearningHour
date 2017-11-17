@@ -1,6 +1,7 @@
 package tugce.movieapp.movie;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,11 +32,19 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
     public View getView(int position, View convertView, ViewGroup parent) {
         final Movie movie = getItem(position);
 
-        LayoutInflater inflater = LayoutInflater.from(getContext());
-        convertView = inflater.inflate(R.layout.item_movie, parent, false);
+        /*ViewHolderMovie holder;
 
-        /*ViewHolderMovie holder = new ViewHolderMovie();
-        holder.ivImage = (ImageView) convertView.findViewById(R.id.ivMovieImage);
+        if (convertView == null) {
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            convertView = inflater.inflate(R.layout.item_movie, parent, false);
+            holder = new ViewHolderMovie();
+            convertView.setTag(holder);
+
+        } else {
+            holder = (ViewHolderMovie) convertView.getTag();
+        }*/
+
+        /*holder.ivImage = (ImageView) convertView.findViewById(R.id.ivMovieImage);
         holder.ivImage.setImageResource(0);
 
         holder.tvTitle = (TextView) convertView.findViewById(R.id.tvTitle);
