@@ -1,22 +1,13 @@
 package tugce.movieapp.movie;
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
-import tugce.movieapp.Constants.MovieAppConstants;
-import tugce.movieapp.moviedetail.MovieDetailActivity;
 import tugce.movieapp.R;
 import tugce.movieapp.models.Movie;
 

@@ -1,4 +1,4 @@
-package tugce.movieapp.Constants;
+package tugce.movieapp.constants;
 
 /**
  * Created by rabia on 11/17/17.

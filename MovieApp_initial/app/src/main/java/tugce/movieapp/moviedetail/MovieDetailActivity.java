@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import tugce.movieapp.Constants.MovieAppConstants;
+import tugce.movieapp.constants.MovieAppConstants;
 import tugce.movieapp.R;
 import tugce.movieapp.helpers.MovieHelpers;
 import tugce.movieapp.models.Movie;
